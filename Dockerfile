@@ -18,8 +18,5 @@ RUN pip install -r requirements.txt
 # Copiar proyecto
 COPY . .
 
-# Exponer puerto
-EXPOSE 8000
-
 # Comando para correr el servidor
 CMD ["gunicorn", "config.wsgi:application", "--bind", "0.0.0.0:8000"]
